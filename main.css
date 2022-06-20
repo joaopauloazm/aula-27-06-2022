@@ -1,0 +1,14 @@
+body {
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+}
+h1 {
+  text-align: center;
+}
+#flores {
+  text-align: center;
+}
+.campo {
+  padding: 2px 4px;
+  font-size: 18px;
+}
