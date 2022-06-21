@@ -1,10 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +8,7 @@ import {
 export class HomeComponent implements OnInit {
   cpf: string = '';
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor() {}
 
   ngOnInit(): void {}
 
