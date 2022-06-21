@@ -1,0 +1,9 @@
+<div class="box">
+  <h1>Ursinhos Carinhosos</h1>
+  <p>Infome seu cpf</p>
+  <input placeholder="Digite o CPF" [(ngModel)]="cpf" type="text" />
+  <p>
+    Result: <span>{{ cpf }}</span>
+  </p>
+  <button (click)="validar()">Validar</button>
+</div>
