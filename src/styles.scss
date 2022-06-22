@@ -3,3 +3,25 @@ body {
   font-family: "Courier New", Courier, monospace;
   font-size: 18px;
 }
+.form-box {
+  margin: 0 auto;
+  padding: 10px 0;
+  border: solid 1px #ccc;
+  width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 0 6px #ccc;
+  input {
+    padding: 20px 10px;
+    border-radius: 6px;
+    border: solid 1px #444;
+    width: 400px;
+    margin: 10px auto;
+    display: block;
+    padding: 6px;
+    font-size: 18px;
+  }
+  .ng-touched.ng-invalid {
+    border: solid 3px rgb(172, 10, 10);
+    color: rgb(172, 10, 10);
+  }
+}
