@@ -1,0 +1,16 @@
+.menuzinho {
+  float: left;
+  border: solid 1px #ccc;
+  padding: 20px 10px;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  a {
+    color: rgb(13, 110, 253);
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
