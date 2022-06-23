@@ -6,6 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SobreModule } from './sobre/sobre.module';
 import { MenuModule } from './menu/menu.module';
+import { ClienteModule } from './cliente/cliente.module';
+import { FarmaceuticoModule } from './farmaceutico/farmaceutico.module';
+import { FornecedorModule } from './fornecedor/fornecedor.module';
+import { ProdutoModule } from './produto/produto.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,6 +19,10 @@ import { MenuModule } from './menu/menu.module';
     HomeModule,
     SobreModule,
     MenuModule,
+    ClienteModule,
+    FarmaceuticoModule,
+    FornecedorModule,
+    ProdutoModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

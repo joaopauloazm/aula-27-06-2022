@@ -1,0 +1,34 @@
+<div class="box">
+  <p>Novos Clientes</p>
+  <form class="form-box" [formGroup]="form" (ngSubmit)="cadastrar()">
+    <input
+      formControlName="nome"
+      placeholder="Nome"
+      type="text"
+      maxlength="64"
+    />
+    <input formControlName="cpf" placeholder="Cpf" type="text" maxlength="14" />
+    <input
+      formControlName="email"
+      placeholder="Email"
+      type="email"
+      maxlength="32"
+    />
+    <input
+      formControlName="aniver"
+      placeholder="Data de Nascimento"
+      type="date"
+    />
+    <button type="submit" [disabled]="!form.valid">Cadastrar</button>
+  </form>
+  <hr />
+  <h2>Meus Clientes</h2>
+  <ul>
+    <li *ngFor="let cliente of list">
+      <span>{{ cliente.id }} </span>
+      <span>{{ cliente.nome }} </span>
+      <span>{{ cliente.aniver | date: "dd/MM/yyyy" }}</span>
+      <hr />
+    </li>
+  </ul>
+</div>
