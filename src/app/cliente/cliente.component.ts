@@ -68,6 +68,15 @@ export class ClienteComponent implements OnInit {
     this.form.controls['email'].setValue(cliente.email);
   }
 
+  apagar(cliente: Cliente): void {
+    this.delete(cliente.id).subscribe((domain: Cliente) => {
+      if (domain.id) {
+        this.carregarTabela();
+        this.form.reset();
+      }
+    });
+  }
+
   private post(model: ClienteModel): Observable<Cliente> {
     const url = 'http://localhost:8080/cliente/cadastrar';
     return this.http.post<Cliente>(url, model);
@@ -81,5 +90,10 @@ export class ClienteComponent implements OnInit {
   private get(): Observable<Cliente[]> {
     const url = 'http://localhost:8080/cliente/consultar';
     return this.http.get<Cliente[]>(url);
+  }
+
+  private delete(id: string): Observable<Cliente> {
+    const url = 'http://localhost:8080/cliente/remover/' + id;
+    return this.http.delete<Cliente>(url);
   }
 }
